@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-08-13T08:00:03Z" name="Default suite" finished-at="2024-08-13T08:00:07Z" duration-ms="3655">
+    <groups>
+    </groups>
+    <test started-at="2024-08-13T08:00:03Z" name="Default test" finished-at="2024-08-13T08:00:07Z" duration-ms="3655">
+      <class name="NinzaTest.EmployeeTest">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:NinzaTest.EmployeeTest@be68757]" started-at="2024-08-13T07:59:55Z" name="configBS" finished-at="2024-08-13T08:00:03Z" duration-ms="7899" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBS -->
+        <test-method signature="withoutNoEmployeeTest()[pri:0, instance:NinzaTest.EmployeeTest@be68757]" started-at="2024-08-13T08:00:03Z" name="withoutNoEmployeeTest" finished-at="2024-08-13T08:00:07Z" duration-ms="3614" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- withoutNoEmployeeTest -->
+        <test-method is-config="true" signature="configAS()[pri:0, instance:NinzaTest.EmployeeTest@be68757]" started-at="2024-08-13T08:00:07Z" name="configAS" finished-at="2024-08-13T08:00:07Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAS -->
+      </class> <!-- NinzaTest.EmployeeTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
