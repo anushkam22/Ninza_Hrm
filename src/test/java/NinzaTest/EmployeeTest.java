@@ -25,6 +25,7 @@ import io.restassured.response.Response;
 
 public class EmployeeTest extends Baseclass {
 	
+	Employee e;
 	
 	@Test
 	public void addEmployeeTest() throws Throwable {
@@ -48,7 +49,7 @@ public class EmployeeTest extends Baseclass {
 		
 		
 		
-					Employee e = new Employee("Architecture","22-10-1997","aak@gmail.com",
+					e = new Employee("Architecture","22-10-1997","aak@gmail.com",
 				userName,4,"7066363194", projectName ,"ROLE_EMPLOYEE",userName);
 		
 		Response rsp=			given()
@@ -66,6 +67,48 @@ public class EmployeeTest extends Baseclass {
 			Assert.assertTrue(flag,"Project in Db not verified");
 
 	}
+	
+	@Test(dependsOnMethods = "addEmployeeTest")
+	public void duplicatename() throws Throwable {
+
+//		
+     String BaseUri=flib.getDataFromPropertyFile("BaseUri");
+//		
+//			String projectName = "Airtell_" + jlib.getRandomNumber();
+//			String userName = "user_"+jlib.getRandomNumber();
+//			
+//			Projectt p = new Projectt("anushkam", projectName, "created", 0);
+//		
+//					given()
+//							.contentType(ContentType.JSON)
+//							.body(p)
+//					.when()
+//							.post(BaseUri+IEndPoints.addProj)
+//					.then()
+//							.assertThat().statusCode(201)
+//							.log().all();
+//		
+//		
+//		
+//					Employee e = new Employee("Architecture","22-10-1997","aak@gmail.com",
+//				userName,4,"7066363194", projectName ,"ROLE_EMPLOYEE",userName);
+		
+		Response rsp=			given()
+							.contentType(ContentType.JSON)
+							.body(e)
+					.when()
+							.post(BaseUri+IEndPoints.addEmp);
+					rsp.then()
+							//.assertThat().statusCode(201)
+							.log().all();
+					int i=rsp.getStatusCode();
+
+					dlib.getConnection();
+		//	boolean flag=dlib.executeQueryandVerifyQuery("select * from employee", 5, userName);
+			//Assert.assertTrue(flag,"Project in Db not verified");
+
+	}
+
 
 	@Test
 	public void withoutEmailEmployeeTest() throws Throwable {

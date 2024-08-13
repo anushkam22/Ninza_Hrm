@@ -5,9 +5,10 @@
     <classes>
       <class name="NinzaTest.EmployeeTest">
         <methods>
+          <include name="addEmployeeTest"/>
           <include name="configAS"/>
           <include name="configBS"/>
-          <include name="withoutNameEmployeeTest"/>
+          <include name="duplicatename"/>
         </methods>
       </class> <!-- NinzaTest.EmployeeTest -->
     </classes>
